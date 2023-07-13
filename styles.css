@@ -1,0 +1,110 @@
+:root {
+  --main-fon: "Manrope", sans-serif;
+  --font-size: 28px;
+  /*Primary*/
+  --Light-Cyan: hsl(193, 38%, 86%);
+  --Neon-Green: hsl(150, 100%, 66%);
+  /*Neutral*/
+  --Grayish-blue: hsl(217, 19%, 38%);
+  --Dark-Grayish-Blue: hsl(217, 19%, 24%);
+  --Dark-Blue: hsl(218, 23%, 16%);
+  --container-width: 1440px;
+}
+html {
+  box-sizing: border-box;
+  font-family: var(--main-fon);
+  font-size: var(--font-size);
+  scroll-behavior: smooth;
+}
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+body {
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+  text-align: center;
+  background-color: var(--Dark-Blue);
+}
+#advice {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 50%;
+  transform: translateY(25%);
+  width: 50%;
+  height: 300px;
+  margin: auto;
+  background: var(--Dark-Grayish-Blue);
+  border-radius: 30px;
+  text-align: center;
+  padding: 2rem;
+}
+#advice p {
+  font-size: 16px;
+  color: var(--Neon-Green);
+}
+#advice h1 {
+  font-size: 28px;
+  font-family: var(--main-fon);
+  color: var(--Light-Cyan);
+}
+#advice .svgone {
+  max-width: 100%;
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.button {
+  display: block;
+  background-color: var(--Neon-Green);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -25px;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 100%;
+  cursor: pointer;
+  border: none;
+}
+.button:hover {
+  box-shadow: 5px 5px 50px var(--Neon-Green);
+}
+#advice .svgtwo {
+  margin: auto;
+}
+.footer {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.attribution {
+  font-size: 11px;
+  margin: auto;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 550px) {
+  #advice {
+    position: relative;
+    top: 20%;
+    transform: translateY(15%);
+    width: 70%;
+    margin: auto;
+    padding: 1rem;
+  }
+  #advice .svgone {
+    max-width: 80%;
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
